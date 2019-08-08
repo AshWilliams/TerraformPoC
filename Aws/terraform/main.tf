@@ -10,7 +10,7 @@ provider "aws" {
 # terraform {
 #   backend "s3" {
 #     bucket = "tfbackendasu"
-#     key    = "terraform/dev/terraform_dev.tfstate"
+#     key    = "terraform_dev.tfstate"
 #     dynamodb_table = "terraform-state-locking"
 #     encrypt = true # Optional, S3 Bucket Server Side Encryption
 #     region = "us-east-2"
@@ -46,7 +46,7 @@ resource "aws_security_group" "sg" {
 
 resource "aws_instance" "example" {
   count         = "${var.terraform_instance_count}"
-  ami           = "ami-36a86d5b" 
+  ami           = "ami-0eaa025a752a23c5b" 
   instance_type = "z1d.large"
   vpc_security_group_ids = ["${aws_security_group.sg.id}"]
   tags = {
