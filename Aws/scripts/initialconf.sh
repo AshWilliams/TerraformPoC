@@ -33,7 +33,7 @@ terraform validate
 
 terraform plan -out tfdeployment.plan
 
-terraform apply -input=false -auto-approve
+# terraform apply -input=false -auto-approve
 
 #Se comenta terraform destroy
 #terraform destroy

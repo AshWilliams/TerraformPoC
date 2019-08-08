@@ -1,4 +1,12 @@
 
+variable "terraform_instance_count" {
+  default = "2"
+}
+
+variable "terraform_instance_tags" {
+  type = "list"
+  default = ["Development", "UAT"]
+}
 variable "terraform_aws_region" {
   type        = "string"
   default     = "us-east-2"
